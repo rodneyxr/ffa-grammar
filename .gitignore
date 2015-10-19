@@ -1,0 +1,4 @@
+bin/**
+
+src/**
+!src/FileFlow.g4
