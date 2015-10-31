@@ -16,19 +16,19 @@ statement
     ;
 
 assignment
-    : Identifier '=' expression
+    : Variable Indecies? '=' expression
     ;
 
 functionCall
-    : 'touch' Identifier
-    | 'mkdir' Identifier
-    | 'rm' Identifier
-    | 'cp' Identifier Identifier
+    : 'touch' value
+    | 'mkdir' value
+    | 'rm' value
+    | 'cp' value value
     ; 
 
 expression
-    : Identifier'.'Identifier
-    | Identifier
+    : value'.'value
+    | value
     ;
 
 ifStatement
@@ -56,13 +56,21 @@ condition
     | '!' condition
     | condition '&&' condition
     | condition '||' condition
-    | 'exists' Identifier
+    | 'exists' value
     | 'other'
     ;
 
-Identifier
-    : '$x'[0-9]+ 
+value
+    : Variable Indecies?
     | String
+    ;
+
+Variable
+    : '$x'[0-9]+
+    ;
+
+Indecies
+    : ('['[0-9]+']')+
     ;
 
 String

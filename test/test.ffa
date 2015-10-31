@@ -31,3 +31,9 @@ if (exists $x1) {
 } else if (other) {
     rm $x0;
 }
+
+// random junk to test arrays
+$x99[0] = $x0;
+$x99[0][99] = $x99.'/tmp';
+mkdir $x99[0][99];
+touch $x99[0];
