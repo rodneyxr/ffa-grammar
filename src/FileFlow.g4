@@ -1,5 +1,9 @@
 grammar FileFlow;
 
+@header {
+    package edu.utsa.fileflow.antlr;
+}
+
 prog
     : block EOF
     ;

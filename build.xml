@@ -1,7 +1,8 @@
-<project default="compile" name="FileFlow">
+<project default="generate" name="FileFlowGrammar">
     <property name="lib.antlr" value="lib/antlr-4.5.1-complete.jar" />
     <property name="root.dir" value="${user.dir}" />
-    <property name="src.dir" value="${root.dir}/src" />
+    <property name="src.dir" value="${root.dir}/src/edu/utsa/fileflow/antlr" />
+	<property name="grammar.file" value="${root.dir}/src/FileFlow.g4" />
     <property name="bin.dir" value="${root.dir}/bin" />
     <property name="test.dir" value="${root.dir}/test" />
     <property name="testfile" value="${test.dir}/test.ffa" />
@@ -28,7 +29,7 @@
         <java jar="${lib.antlr}" fork="true" failonerror="true">
             <arg value="-o" />
             <arg value="${src.dir}" />
-            <arg value="${src.dir}/FileFlow.g4" />
+            <arg value="${grammar.file}" />
         </java>
     </target>
 

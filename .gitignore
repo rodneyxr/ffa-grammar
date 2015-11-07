@@ -1,4 +1,5 @@
 bin/**
+.settings/
 
 src/**
 !src/FileFlow.g4
