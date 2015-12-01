@@ -1,7 +1,7 @@
 grammar FileFlow;
 
 @header {
-    package edu.utsa.fileflow.antlr;
+package edu.utsa.fileflow.antlr;
 }
 
 prog
