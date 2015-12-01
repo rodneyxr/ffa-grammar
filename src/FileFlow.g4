@@ -20,7 +20,7 @@ statement
     ;
 
 assignment
-    : Variable Indecies? '=' expression
+    : Variable Indices? '=' expression
     ;
 
 functionCall
@@ -65,7 +65,7 @@ condition
     ;
 
 value
-    : Variable Indecies?
+    : Variable Indices?
     | String
     ;
 
@@ -73,7 +73,7 @@ Variable
     : '$x'[0-9]+
     ;
 
-Indecies
+Indices
     : ('['[0-9]+']')+
     ;
 
