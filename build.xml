@@ -45,7 +45,7 @@
         <mkdir dir="${test.dir}" />
         <java classname="org.antlr.v4.gui.TestRig" fork="true" failonerror="true">
             <classpath refid="compile.class.path" />
-            <arg value="FileFlow" />
+            <arg value="edu.utsa.fileflow.antlr.FileFlow" />
             <arg value="prog" />
             <arg value="-gui" />
             <arg value="${testfile}" />
