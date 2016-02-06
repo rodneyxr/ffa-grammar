@@ -24,14 +24,14 @@ assignment
     ;
 
 functionCall
-    : 'touch' value
-    | 'mkdir' value
-    | 'rm' value
-    | 'cp' value value
+    : 'touch' expression
+    | 'mkdir' expression
+    | 'rm' expression
+    | 'cp' expression expression
     ; 
 
 expression
-    : value'.'value
+    : expression'.'expression
     | value
     ;
 
@@ -60,7 +60,7 @@ condition
     | '!' condition
     | condition '&&' condition
     | condition '||' condition
-    | 'exists' value
+    | 'exists' expression
     | 'other'
     ;
 
