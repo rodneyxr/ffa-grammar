@@ -34,6 +34,6 @@ if (exists $x1) {
 
 // random junk to test arrays
 $x99[0] = $x0;
-$x99[0][99] = $x99.'/tmp';
-mkdir $x99[0][99];
+$x99[0] = $x99.'/tmp';
+mkdir $x99[0];
 touch $x99[0];

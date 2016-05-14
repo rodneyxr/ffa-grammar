@@ -20,7 +20,7 @@ statement
     ;
 
 assignment
-    : Variable Indices? '=' expression
+    : Variable Index? '=' expression
     ;
 
 functionCall
@@ -31,7 +31,7 @@ functionCall
     ; 
 
 expression
-    : expression'.'expression
+    : value'.'value
     | value
     ;
 
@@ -65,7 +65,7 @@ condition
     ;
 
 value
-    : Variable Indices?
+    : Variable Index?
     | String
     ;
 
@@ -73,8 +73,8 @@ Variable
     : '$x'[0-9]+
     ;
 
-Indices
-    : ('['[0-9]+']')+
+Index
+    : '['[0-9]+']'
     ;
 
 String
