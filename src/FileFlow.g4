@@ -21,6 +21,7 @@ statement
 
 assignment
     : Variable Index? '=' expression
+    | Variable Index? '=' Input
     ;
 
 functionCall
@@ -28,7 +29,7 @@ functionCall
     | 'mkdir' expression
     | 'rm' expression
     | 'cp' expression expression
-    ; 
+    ;
 
 expression
     : value'.'value
@@ -74,13 +75,17 @@ Variable
     ;
 
 Index
-    : '['[0-9]+']'
+    : '[' '?' ']'
     ;
 
 String
     : ["] (~["\r\n] | '\\\\' | '\\"')* ["]
     | ['] (~['\r\n] | '\\\\' | '\\\'')* [']
     ;
+    
+Input
+	: 'INPUT'
+	;
 
 Comment
     : ('//' ~[\r\n]* | '/*' .*? '*/') -> skip
