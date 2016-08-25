@@ -20,8 +20,8 @@ statement
     ;
 
 assignment
-    : Variable Index? '=' expression
-    | Variable Index? '=' Input
+    : Variable Index '=' arrayValue
+    | Variable '=' varValue
     ;
 
 functionCall
@@ -30,6 +30,16 @@ functionCall
     | 'rm' expression
     | 'cp' expression expression
     ;
+
+arrayValue
+	: varValue
+	| EmptyValue
+	;
+	 
+varValue
+	: expression
+	| Input
+	;
 
 expression
     : value'.'value
@@ -85,6 +95,10 @@ String
     
 Input
 	: 'INPUT'
+	;
+	
+EmptyValue
+	: '[' ']'
 	;
 
 Comment
