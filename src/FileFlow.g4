@@ -89,8 +89,8 @@ Index
     ;
 
 String
-    : ["] (~["\r\n] | '\\\\' | '\\"')* ["]
-    | ['] (~['\r\n] | '\\\\' | '\\\'')* [']
+    : ["] (~["\r\n] | '\\\\' | '\\"')* ["] {setText(getText().substring(1, getText().length()-1));}
+    | ['] (~['\r\n] | '\\\\' | '\\\'')* ['] {setText(getText().substring(1, getText().length()-1));}
     ;
     
 Input
