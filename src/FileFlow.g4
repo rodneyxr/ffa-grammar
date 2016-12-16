@@ -25,10 +25,10 @@ assignment
     ;
 
 functionCall
-    : 'touch' expression
-    | 'mkdir' expression
-    | 'rm' expression
-    | 'cp' expression expression
+    : 'touch' value
+    | 'mkdir' value
+    | 'rm' value
+    | 'cp' value value
     ;
 
 arrayValue
