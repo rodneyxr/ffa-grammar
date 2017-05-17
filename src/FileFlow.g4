@@ -28,6 +28,7 @@ functionCall
     : 'touch' value
     | 'mkdir' value
     | 'rm' value
+    | 'rmr' value
     | 'cp' value value
     ;
 
