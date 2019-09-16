@@ -31,6 +31,7 @@ functionCall
     | 'rmr' value
     | 'cp' value value
     | 'assert' '(' condition ')'
+    | 'cd' value
     ;
 
 arrayValue
