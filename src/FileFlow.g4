@@ -30,13 +30,15 @@ functionCall
     | 'rm' value
     | 'rmr' value
     | 'cp' value value
+    | 'assert' '(' condition ')'
+    | 'cd' value
     ;
 
 arrayValue
 	: varValue
 	| EmptyValue
 	;
-	 
+
 varValue
 	: expression
 	| Input
